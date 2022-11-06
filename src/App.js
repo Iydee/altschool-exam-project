@@ -8,15 +8,20 @@ function Home() {
     <section className="home-container">
       <h1>Hello Guest!</h1>
       <p>This is my Home Page</p>
-      Click{" "}
+      <p>My name is Salami Moses</p>
+      <img src="" alt=""></img>
+      <p>I want to become a frontend engineer but really struggling with it</p>
+      <div><p>Click{" "}
       <a className="Nav" href="/about">
         About Page
       </a>{" "}
-      to go to the About Page. You can also click{" "}
+      to go to the About Page.</p></div>
+      
+      <div><p>You can also click{" "}
       <a className="Nav" href="/User">
         User Page
       </a>{" "}
-      to go to the User Page.
+      to go to the User Page.</p></div>
     </section>
   );
 }
@@ -26,15 +31,16 @@ function About() {
     <section className="about-container">
       <h1>Hello Again...</h1>
       <p>This is the About Page</p>
-      Click{" "}
+      <div><p>Click{" "}
       <a className="Nav" href="/">
         Home Page
       </a>{" "}
-      to go to the HomePage. You can also click{" "}
+      to go to the HomePage.</p></div>
+      <div><p>You can also click{" "}
       <a className="Nav" href="/User">
         User Page
       </a>{" "}
-      to go to the User Page.
+      to go to the User Page.</p></div> 
     </section>
   );
 }
