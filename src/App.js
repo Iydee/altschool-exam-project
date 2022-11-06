@@ -2,8 +2,6 @@ import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-
-
 function Home() {
   return (
     <section className="home-container">
@@ -12,9 +10,7 @@ function Home() {
         <img src="/Images/iydee.JPG" alt="my photo"></img>
       </div>
       <p>My name is Salami Moses</p>
-      <p>
-        I am a frontend engineer in training, who's really struggling with it
-      </p>
+      <p>I am a frontend engineer in training...</p>
       <div>
         <p>
           Click{" "}
