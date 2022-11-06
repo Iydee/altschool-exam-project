@@ -1,13 +1,10 @@
 import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react"
-
-
-
+import { useEffect, useState } from "react";
 
 function Home() {
-  return(
+  return (
     <section className="home-container">
       <h1>Hello Guest!</h1>
       <p>This is my Home Page</p>
@@ -20,8 +17,8 @@ function Home() {
         User Page
       </a>{" "}
       to go to the User Page.
-  </section>
-  )
+    </section>
+  );
 }
 
 function About() {
@@ -61,43 +58,38 @@ function NotFound() {
 }
 
 function User() {
-
-
   // const UsingFetch = () => {
-    const [users, setUsers] = useState([])
-  
-    const fetchData = () => {
-      fetch("https://github.com/Iydee?tab=repositories")
-        .then(response => {
-          console.log("response.json")
-          // return response.json()
-        })
-        .then(response => {
-          console.log(response)
-          // setUsers(response)
-        })
-    }
-  
-    useEffect(() => {
-      fetchData()
-    }, [])
-  
-  
-    return (
-      <div>
-        {users.length > 0 && (
-          <div>
-            {users.map(user => (
-              <p key={user.id}>{user.name}</p>
-            ))}
-          </div>
-        )}
-      </div>
-    )
-  }
+  const [users, setUsers] = useState([]);
 
+  const fetchData = () => {
+    fetch("https://api.github.com/users/:Iydee")
+      .then((response) => {
+        console.log("response.json");
+        // return response.json()
+      })
+      .then((response) => {
+        console.log(response);
+        // setUsers(response)
+      });
+  };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
 
+  return (
+    <div>
+      <p> Hello User, welcome to my page</p>
+      {users.length > 0 && (
+        <div>
+          {users.map((user) => (
+            <p key={user.id}>{user.name}</p>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function App() {
   return (
